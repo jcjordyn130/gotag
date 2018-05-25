@@ -10,6 +10,7 @@ import (
 	"github.com/jcjordyn130/gotag/types"
 )
 
+// getMime takes a filename and returns the mimetype of it.
 func getMime(file string) (string, error) {
 	buf, _ := ioutil.ReadFile(file)
 
@@ -21,6 +22,7 @@ func getMime(file string) (string, error) {
 	return kind.MIME.Value, nil
 }
 
+// Open returns an open decoder based off of the file it's given.
 func Open(file string) (types.Metadata, error) {
 	// Get the mime type.
 	mime, err := getMime(file)
