@@ -1,3 +1,4 @@
+// Here lives the decoders for gotag, this is all the format specific stuff.
 package decoders
 
 import (
@@ -9,7 +10,7 @@ import (
 )
 
 // Sum returns the sha256 sum of a track.
-// This is for internal use, use m.Sum().
+// You can either use this or use metadata.Sum().
 func Sum(m types.Metadata) (string, error) {
 	// Open the file.
 	file, err := os.Open(m.File())

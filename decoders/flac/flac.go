@@ -82,7 +82,7 @@ func (m *metadata) AlbumArt() (*types.Picture, error) {
 
 	// Process all the FLAC blocks.
 	for _, block := range m.stream.Blocks {
-		// Try to get the specialised interface, if we can't then it's not a PictureBlock.
+		// Try to get the specialised interface (type casting), if we can't then it's not a PictureBlock.
 		body, ok := block.Body.(*meta.Picture)
 		if ! ok {
 			continue
