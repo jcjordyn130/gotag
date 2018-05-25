@@ -23,7 +23,6 @@ type metadata struct {
 // getTag() returns the given tag, or an error if it doesn't exist.
 func (m *metadata) getTag(tag string) (string, error) {
 	stag := m.stream.GetTextFrame(tag).Text
-	fmt.Printf("Tag %d: %d \n", tag, stag)
 
 	if stag != "" {
 		return stag, nil
