@@ -69,18 +69,19 @@ func (m *metadata) Genre() ([]string, error) {
 }
 
 func (m *metadata) Open(file string) (*metadata, error) {
+	return nil, errors.New("Not implemented yet")
 	// Define the variable we use the store errors.
-	var err error
+	//var err error
 
 	// Make a new metadata struct.
-	metadata := new(metadata)
+	//metadata := new(metadata)
 
 	// Open the file.
-	openfile, err := os.Open(file)
-	if err != nil {
-		return nil, err
-	}
+	//openfile, err := os.Open(file)
+	//if err != nil {
+	//	return nil, err
+	//}
 
 	// Open the decoder.
-	metadata.stream, err = decoder.New
+	//metadata.stream, err = decoder.New
 }
